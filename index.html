@@ -18,7 +18,23 @@
     header h1 { font-family:'Playfair Display', serif; font-weight:400; font-size:42px; margin-bottom:15px; animation:fadeInDown 1.2s ease; }
     header p { font-size:18px; font-weight:300; animation:fadeInUp 1.2s ease; }
     .top-button { margin-top:20px; }
-    .top-button .button { font-size:16px; }
+    .top-button .button {
+      font-size: 16px;
+      background: var(--accent-2);      /* основной фон */
+      color: white;                      /* цвет текста */
+      border: 2px solid var(--accent-2); 
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .top-button .button:hover {
+      background: white;                 /* меняем фон при наведении */
+      color: var(--accent-2);            /* цвет текста при наведении */
+      transform: scale(1.05);
+    }
     .profile-section { display:flex; flex-wrap:wrap; max-width:1000px; margin:40px auto; gap:30px; align-items:center; animation:fadeInUp 1.2s ease; }
     .profile-img { width:240px; height:240px; border-radius:20px; object-fit:cover; border:3px solid var(--accent-2); box-shadow:0 6px 16px rgba(0,0,0,0.25); flex-shrink:0; animation:zoomIn 1.5s ease; }
     .profile-text { flex:1; min-width:280px; }
@@ -106,15 +122,15 @@
       <p>Телефон: +7 (905) 411-87-42</p>
       <p>Email: <a href="mailto:dinulya71@mail.ru">dinulya71@mail.ru</a></p>
       <p>Соцсети: 
-        <a href="#" target="@dina_petrovna4">Telegram</a> | 
-        <a href="#" target="https://t.me/mateshha">Telegram канал</a>
+        <a href="https://web.telegram.org/k/#@dina_petrovna4" target="_blank">Telegram</a> |
+        <a href="https://t.me/mateshha" target="_blank">Telegram канал</a>
       </p>
     </div>
   </section>
   <section id="form-section">
     <h2>Записаться на занятие</h2>
     <div class="card">
-      <form action="https://formspree.io/f/mnqekgqp" method="POST">
+      <form action="https://formspree.io/f/movnyvap" method="POST">
         <input type="text" name="Имя" placeholder="Ваше имя" required>
         <input type="email" name="Email" placeholder="Ваш email или телефон" required>
         <input type="text" name="Уровень" placeholder="Уровень ученика (например, 7 класс)">
